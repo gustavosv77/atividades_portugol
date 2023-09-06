@@ -1,0 +1,60 @@
+programa {
+
+    caracter opcao
+    real Celsius
+    real Fahrenheit
+    real result
+    logico reiniciar = verdadeiro 
+    
+
+    funcao conversao_celsius(cadeia tipoConversao){
+      limpa()
+      escreva("Convertor de\t", tipoConversao, "\n")
+      escreva("\nDigite a temperatura em Celsius:\t\n")
+      escreva("resposta:\t")
+      leia(Celsius)
+    }
+
+    funcao conversao_fahrenheit(cadeia tipoConversao){
+      limpa()
+      escreva("Convertor de\t", tipoConversao, "\n")
+      escreva("\nDigite a temperatura em Fahrenheit:\t\n")
+      escreva("resposta:\t")
+      leia(Fahrenheit)
+    }
+
+
+    funcao calcular(){
+      limpa() 
+      escreva("Convertor de Temperatura\n")
+      escreva("\nEscolha a Conversão:\n")
+      escreva("1 - Celsius para Fahrenheit \n")
+      escreva("2 - Fahrenheit para Celsius\n")
+      escreva("\nresposta:\t")
+      leia(opcao)
+
+    se (opcao == 1) {
+      conversao_celsius("Celsius para Fahrenheit")
+      result = Celsius * 1.8 + 32
+      limpa()
+      escreva("\nO resultado é:\t", result, "\n")
+    }
+    
+    se (opcao == 2) {
+      conversao_fahrenheit("Fahrenheit para Celsius")
+      result = (Fahrenheit - 32) / 1.8
+      limpa()
+      escreva("\nO resultado é:\t", result, "\n")
+    }
+    }
+    funcao inicio() {
+      enquanto (reiniciar) {
+      calcular()
+      escreva("\nDeseja calcular novamente? digite 'y' para sim e 'n' para não:\n")
+      escreva("Resposta:\t")
+      leia(reiniciar)
+      }
+    }
+
+    }
+  
