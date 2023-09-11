@@ -3,8 +3,10 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro x, valor=1, divisores=0
-		
+		inteiro x  divisores=0
+		inteiro valor=1
+		inteiro divisores=0
+			
 			escreva("Digite um valor maior que 0 para saber se ele é um número primo!\n")
 			escreva("Digite o valor:\n")
 	
