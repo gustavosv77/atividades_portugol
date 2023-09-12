@@ -1,11 +1,12 @@
-programa {
-  
+programa 
+{   inclua biblioteca Matematica-->mat
+  	
 
   
   funcao inicio() {
     
-    real taxa , porcentagem , tempo , montante , capital , juros
-
+    	real taxa , porcentagem , tempo , montante , capital , juros , base , resultado
+	    real arredonda , arredonda2
 
 
       escreva("Calculadora de Juros Compostos\n")
@@ -19,20 +20,27 @@ programa {
       leia(tempo)
       limpa()
 
-       
-          
-          taxa= porcentagem / 100
+		taxa= porcentagem / 100
 
-          montante=  capital * (1+taxa)  tempo
+		base= 1+taxa
 
-      escreva("O montante é de:\t" , montante, "\treais" )
+		resultado= mat.potencia(base, tempo)
 
-          juros= montante - capital
+    montante=  capital * resultado 
 
-      escreva("\nO total de juros foi de:\t" , juros , "\treais")
+		arredonda= mat.arredondar(montante, 2)
+		
+        escreva("O montante é de: ",arredonda," R$\n" )
+
+    juros= montante - capital
+
+		arredonda2= mat.arredondar(juros, 2)
+
+        escreva("\nO total de juros foi de: ",arredonda2," R$")
 
 
 
 
   }
 }
+
