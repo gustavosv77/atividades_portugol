@@ -1,0 +1,40 @@
+programa {
+    inclua biblioteca Util --> u
+      funcao inicio() {
+        
+        inteiro numero
+        inteiro sorteio
+        logico confirm=verdadeiro
+        sorteio = u.sorteia(1, 10)
+
+        escreva("Jogo de adivinhação!\n")
+        escreva("Digite um numero entre 1 e 10 para tentar adivinhar\n\n")
+        escreva("Resposta:")
+        leia(numero)
+        limpa()
+        
+        escreva(sorteio,"\n")
+
+        enquanto(numero<sorteio ou numero>sorteio)
+          se(sorteio<numero){
+            escreva("O numero digitado é maior que o Sorteado\n\n")
+            escreva("Tente novamente!\n\n")
+            escreva("Resposta:")
+            leia(numero)
+            limpa()
+            }
+            
+          senao se(sorteio>numero){
+            escreva("O numero digitado é menor que o Sorteado\n\n")
+            escreva("Tente novamente!\n\n")
+            escreva("Resposta:")
+            leia(numero)
+            limpa()
+          }
+        
+
+
+        se(numero==sorteio)
+        escreva("Parabéns você acertou")
+  }
+}
