@@ -1,0 +1,27 @@
+programa {
+  funcao inicio() {
+    
+    inteiro numero
+    inteiro result=1
+    inteiro termo=1
+
+      escreva("Calculadora de Fatorial\n")
+      escreva("Digite um número para calcular!\n\n")
+      escreva("Resposta:")
+      leia(numero)
+      limpa()
+
+
+        enquanto(termo<=numero){
+          result= result * termo
+          termo= termo+1
+        }
+
+      escreva("O fatorial de\t",numero,"\té\t",result)
+  
+  
+  
+  
+  
+  }
+}
