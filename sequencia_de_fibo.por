@@ -1,20 +1,22 @@
-programa{
+programa
+{
 	
-	
+	funcao inicio()
+	{
+		inteiro a=0, b=1, termo
 
-  funcao inteiro fibo(inteiro n){
-    		se(n == 1)
-      		retorne 0
-    		senao{
-      		se(n == 2)
-        	retorne 1
-      	
-      	
-    	}
-  }
-  
+		faca{
+			escreva("Sequência de Fibonacci\n")
+			escreva("Qual termo deseja descobrir?\n")
+			escreva("Resposta:")
+			leia(termo)
+		    }
+		enquanto(termo<1)
 
-    		
-  
-  }
+		se()
+
+			
+		
+	}
 }
+
