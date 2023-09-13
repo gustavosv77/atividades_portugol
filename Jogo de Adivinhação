@@ -1,12 +1,13 @@
 programa {
     inclua biblioteca Util --> u
-      funcao inicio() {
+      
         
         inteiro numero
         inteiro sorteio
         inteiro tentativas = 1
+        logico reiniciar = verdadeiro
         
-        
+        funcao sortear(){
         sorteio = u.sorteia(1, 100)
 
         escreva("Jogo de adivinhação!\n")
@@ -16,12 +17,13 @@ programa {
         limpa()
         
         escreva(sorteio,"\n")
+        }
 
 
-
+        funcao jogar(){
         enquanto(numero<sorteio ou numero>sorteio)
           se(tentativas>9){
-          escreva("Game Over!")
+          escreva("Game Over!\n")
           pare}
           
           senao se(sorteio<numero){
@@ -46,8 +48,17 @@ programa {
 
         se(numero==sorteio)
         escreva("Parabéns você acertou")
+        }
 
-        
+
+      funcao inicio() {
+        enquanto(reiniciar){
+        sortear()
+        jogar()
+          escreva("\nDeseja jogar novamente? digite 'y' para sim e 'n' para não:\n\n")
+          escreva("Resposta:\t")
+          leia(reiniciar)
+          limpa()
+      }
   }
 }
-
