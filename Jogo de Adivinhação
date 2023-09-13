@@ -4,22 +4,31 @@ programa {
         
         inteiro numero
         inteiro sorteio
-        logico confirm=verdadeiro
-        sorteio = u.sorteia(1, 10)
+        inteiro tentativas = 1
+        
+        
+        sorteio = u.sorteia(1, 100)
 
         escreva("Jogo de adivinhação!\n")
-        escreva("Digite um numero entre 1 e 10 para tentar adivinhar\n\n")
+        escreva("Digite um numero entre 1 e 100 para tentar adivinhar\n\n")
         escreva("Resposta:")
         leia(numero)
         limpa()
         
         escreva(sorteio,"\n")
 
+
+
         enquanto(numero<sorteio ou numero>sorteio)
-          se(sorteio<numero){
+          se(tentativas>9){
+          escreva("Game Over!")
+          pare}
+          
+          senao se(sorteio<numero){
             escreva("O numero digitado é maior que o Sorteado\n\n")
             escreva("Tente novamente!\n\n")
             escreva("Resposta:")
+            tentativas++
             leia(numero)
             limpa()
             }
@@ -28,13 +37,17 @@ programa {
             escreva("O numero digitado é menor que o Sorteado\n\n")
             escreva("Tente novamente!\n\n")
             escreva("Resposta:")
+            tentativas++
             leia(numero)
             limpa()
           }
         
-
+        
 
         se(numero==sorteio)
         escreva("Parabéns você acertou")
+
+        
   }
 }
+
