@@ -23,7 +23,7 @@ programa {
 
 	   
 	   funcao reiniciar(){					//inicio da função reiniciar
-		escreva("\n\tDeseja jogar novamente?\n\n")
+		escreva("\nDeseja jogar novamente?\n\n")
 		escreva("Digite 'S' para sim ou qualquer tecla para sair:\n\n")        	
          	leia(novoJogo)
           limpa()
