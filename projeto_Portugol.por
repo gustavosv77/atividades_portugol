@@ -72,8 +72,7 @@ programa {
 	        	
 	        	se(tentativas>9){
 	        		limpa()
-	        		escreva("Game Over!! O número sorteado era ",sorteio,"\n\n")
-				O número sorteado era ",sorteio,"\n\n"
+	        		escreva("Game Over!! O número sorteado era ",sorteio,"\n\n")				
 	        		reiniciar()   	
 	
 	       	se(numero>100){
