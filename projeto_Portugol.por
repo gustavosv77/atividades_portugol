@@ -42,8 +42,12 @@ programa {
         	
         	enquanto(numero!=sorteio e tentativas<=9){ //inicio da condição enquanto
 
-
-	          se(sorteio<numero){
+			se(numero>100){
+	       		escreva("O número digitado ultrapassa o limite do jogo\n")
+	       		pare
+			}
+			
+	          senao se(sorteio<numero){
 	            escreva("O numero digitado é maior que o Sorteado\n\n")
 	            escreva("Tente novamente!\n\n")
 	            escreva("Resposta:")
@@ -60,7 +64,7 @@ programa {
 	            leia(numero)
 	            limpa()
 	          		} 
-	          escreva("Tentativa numero ",tentativas,"\n\n") // mostra quantas tentativas já foram
+	          
 	          } //termina a condição do enquanto		
 			
 			se(numero==sorteio){
@@ -74,14 +78,9 @@ programa {
 	        		limpa()
 	        		escreva("Game Over!! O número sorteado era ",sorteio,"\n\n")				
 	        		reiniciar()   	
-	
-	       	se(numero>100){
-	       		escreva("O número digitado ultrapassa o limite do jogo")
-	       	}
-	       		
-	        		
-	        		
-	        	}
+	       		}
+
+	        	
 	        } //final da função jogar
         
        
