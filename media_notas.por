@@ -1,9 +1,27 @@
 programa {
-  funcao inicio() {
+  
     
     real result
     real nota1, nota2, nota3, nota4, nota5
+    logico reiniciar = verdadeiro
 
+    funcao reiniciarMedia(){
+    cadeia respostaReiniciar
+
+    escreva("\n\nPara calcular novamente digite 's' ou 'sim' ou qualquer letra para finalizar\n")
+    escreva("Resposta:\t")
+    leia(respostaReiniciar)
+    limpa()
+
+    se (respostaReiniciar == "s" ou respostaReiniciar == "S" ou respostaReiniciar == "sim" ou respostaReiniciar == "Sim" ou respostaReiniciar == "SIM"){
+      reiniciar = verdadeiro
+    }
+    senao{
+      reiniciar = falso
+    }
+  }
+
+    funcao calcularMedia(){
     escreva("Descubra se foi aprovado inserindo suas notas\n")
     
     escreva("\nLembre que as notas vão de 0 a 20 \n")
@@ -42,11 +60,18 @@ programa {
 
 
             se (result >= 60) {
-                escreva("\nVocê foi aprovado")
+                escreva("\nVocê foi aprovado")}
             
-            senao se(result<60)
+            senao se(result<60){
                 escreva("\nVocê foi reprovado")
 }
-
+    }
+     
+     funcao inicio() {
+      enquanto(reiniciar){
+        calcularMedia()
+        reiniciarMedia()
+    }
+     
   }
 }
