@@ -3,14 +3,29 @@ programa
 	
 inclua biblioteca Matematica-->mat
 	
-		funcao inicio()
-	{
+	
 			inteiro peso
 			real altura
 			real result
 			real arredonda
+      logico reiniciar=verdadeiro
 
-		
+      funcao reiniciarImc(){
+      cadeia respostaReiniciar
+
+    escreva("\n\nPara calcular novamente digite 's' ou 'sim' ou qualquer letra para finalizar\n")
+    escreva("Resposta:\t")
+    leia(respostaReiniciar)
+    limpa()
+
+    se (respostaReiniciar == "s" ou respostaReiniciar == "S" ou respostaReiniciar == "sim" ou respostaReiniciar == "Sim" ou respostaReiniciar == "SIM"){
+      reiniciar = verdadeiro
+    }
+    senao{
+      reiniciar = falso
+    }
+  }
+      funcao calculaImc(){
 			escreva("Informe o seu peso e altura para calcular o IDM!\n")
 			escreva("Digite o seu peso em Kg:\n")
 			escreva("\nResposta:")
@@ -40,8 +55,13 @@ inclua biblioteca Matematica-->mat
 				senao se(result >=30 ){
 					escreva("\nVocê está no quadro de obesidade!\n")
 		}
+      }
 
-		
+		funcao inicio() {
+      enquanto(reiniciar){
+        calculaImc()
+        reiniciarImc()
+    }
 		
 		
 		
