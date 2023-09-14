@@ -1,12 +1,29 @@
 programa
 {
 	
-	funcao inicio()
-	{
-		inteiro x  divisores=0
+	
+		inteiro x , divisores=0
 		inteiro valor=1
-		inteiro divisores=0
-			
+		logico reiniciar = verdadeiro
+
+
+    funcao reiniciarVerif(){
+    cadeia respostaReiniciar
+
+    escreva("\n\nPara calcular novamente digite 's' ou 'sim' ou qualquer letra para finalizar\n")
+    escreva("Resposta:\t")
+    leia(respostaReiniciar)
+    limpa()
+
+    se (respostaReiniciar == "s" ou respostaReiniciar == "S" ou respostaReiniciar == "sim" ou respostaReiniciar == "Sim" ou respostaReiniciar == "SIM"){
+      reiniciar = verdadeiro
+    }
+    senao{
+      reiniciar = falso
+    }
+  }
+
+    funcao valorPrimo(){
 			escreva("Digite um valor maior que 0 para saber se ele é um número primo!\n")
 			escreva("Digite o valor:\n")
 	
@@ -34,6 +51,14 @@ programa
 		senao{
 			escreva("O valor é negativo ou igual a zero!\n")
 		}
-	
+    }
+
+    funcao inicio() {
+    enquanto(reiniciar){
+      valorPrimo()
+      reiniciarVerif()
+    }
+
+
 	}
 }
