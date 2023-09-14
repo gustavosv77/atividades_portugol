@@ -24,7 +24,7 @@ programa {
     funcao calcularMedia(){
     escreva("Descubra se foi aprovado inserindo suas notas\n")
     
-    escreva("\nLembre que as notas vão de 0 a 20 \n")
+    escreva("\nLembre que as notas vão de 0 a 10 \n")
 
     
 
@@ -53,16 +53,16 @@ programa {
         limpa()
 
 
-        result= (nota1 + nota2 + nota3 + nota4 + nota5) 
+        result= (nota1 + nota2 + nota3 + nota4 + nota5) / 5
 
 
         escreva("Sua média foi de:" , result, "\tpontos\n")
 
 
-            se (result >= 60) {
+            se (result >= 6) {
                 escreva("\nVocê foi aprovado")}
             
-            senao se(result<60){
+            senao se(result<6){
                 escreva("\nVocê foi reprovado")
 }
     }
