@@ -60,7 +60,7 @@ programa {
 	            leia(numero)
 	            limpa()
 	          		} 
-	          
+	          escreva("Tentativa numero ",tentativas,"\n\n") // mostra quantas tentativas já foram
 	          } //termina a condição do enquanto		
 			
 			se(numero==sorteio){
