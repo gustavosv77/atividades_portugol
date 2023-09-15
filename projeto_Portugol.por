@@ -8,8 +8,8 @@ programa {
         cadeia novoJogo=""
 
         
-        
-        funcao menuJogo(){			//inicio da função menu//
+        					//inicio da função menu//
+        funcao menuJogo(){			
 
         	escreva("Jogo de adivinhação!!!\n\n")
         	escreva("Escolha a Dificuldade do jogo:\n\n")
@@ -19,10 +19,11 @@ programa {
         	escreva("Resposta:")
         	leia(menuOpcao)
         	limpa()     
-        } 	//final da função menu//
+        } 	
+			//final da função menu//
 
-
-		funcao jogar(){			//inicio da função jogar
+							//inicio da função jogar
+		funcao jogar(){			
 			se(menuOpcao==1){
         		escreva("Digite um numero entre 1 e 50 para tentar adivinhar!\n\n")
         		escreva("Resposta:")
@@ -41,11 +42,12 @@ programa {
         		leia(numero)
         		limpa()
         		}
-		}				//final da função jogar
+		}				
+			//final da função jogar
 		
 
-	   
-	   funcao reiniciar(){					//inicio da função reiniciar//
+	   							//inicio da função reiniciar//
+	   funcao reiniciar(){					
 		  escreva("\nDeseja jogar novamente?\n\n")
 		  escreva("Digite 'S' para sim ou qualquer tecla para sair:\n\n")        	
          	leia(novoJogo)
@@ -56,20 +58,22 @@ programa {
           	inicio()         	
           	}senao{
           	}
-        } //final da função reiniciar//
+        } 
+			//final da função reiniciar//
 
 
-          
-	   funcao sortear(){ 		//inicio da função sortear//
+          						//inicio da função sortear//
+	   funcao sortear(){ 		
         	se(menuOpcao==1) sorteio = u.sorteia(1, 50)
         		senao se(menuOpcao==2) sorteio = u.sorteia(1, 70) 
               senao se(menuOpcao==3) sorteio = u.sorteia(1, 100)
 
-	   }		//final da função sortear// 
+	   }		
+		//final da função sortear// 
 
 
-
-        funcao regras(){  	//inicio da função regras
+						//inicio da função regras
+        funcao regras(){  	
 
         	se(menuOpcao==1){
         		valorMaximo=50
@@ -84,8 +88,8 @@ programa {
             chances=4	
         	}
         			             	
-        	
-        	enquanto(numero!=sorteio e tentativas<=chances){ //inicio da condição enquanto
+        								//inicio da condição enquanto
+        	enquanto(numero!=sorteio e tentativas<=chances){ 
 
 			se(numero>valorMaximo){
 	       		escreva("O número digitado ultrapassa o limite do jogo\n")
@@ -110,7 +114,8 @@ programa {
 	            limpa()
 	          		} 
                 
-	          } //termina a condição do enquanto		
+	          } 
+				//termina a condição do enquanto		
 			
 			se(numero==sorteio){
 	           	limpa()
@@ -127,7 +132,8 @@ programa {
               
 
 	        	
-	        } 		//final da função regras
+	        } 		
+			//final da função regras
         
        
         
