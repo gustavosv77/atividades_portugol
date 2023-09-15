@@ -119,7 +119,7 @@ programa {
 			
 			se(numero==sorteio){
 	           	limpa()
-	           	escreva("Parabéns você acertou!!!\n\n") 
+	           	escreva("Parabéns você acertou em ",tentativas," tentativas!!!\n\n"") 
 	           	reiniciar()         	
 	           	}
 	
