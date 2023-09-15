@@ -2,7 +2,7 @@ programa {
   
     
     real result
-    real nota1, nota2, nota3, nota4, nota5
+    real nota1, nota2, nota3, nota4
     logico reiniciar = verdadeiro
 
     funcao reiniciarMedia(){
@@ -47,23 +47,18 @@ programa {
         leia(nota4)
         limpa()
 
-      
-        escreva ("Digite a quinta nota:")
-        leia(nota5)
-        limpa()
+
+        result= (nota1 + nota2 + nota3 + nota4) / 4
 
 
-        result= (nota1 + nota2 + nota3 + nota4 + nota5) / 5
-
-
-        escreva("Sua média foi de:" , result, "\tpontos\n")
+        escreva("Sua média foi de: " , result, "\tpontos\n")
 
 
             se (result >= 6) {
-                escreva("\nVocê foi aprovado")}
+                escreva("\nVocê foi aprovado :)")}
             
             senao se(result<6){
-                escreva("\nVocê foi reprovado")
+                escreva("\nVocê foi reprovado :(")
 }
     }
      
