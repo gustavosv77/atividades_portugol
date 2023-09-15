@@ -4,15 +4,10 @@ programa {
     inclua biblioteca Util --> u
       
         
-        inteiro numero
-        inteiro sorteio
-        inteiro tentativas = 1
+        inteiro numero, sorteio, tentativas = 1, menuOpcao, valorMaximo, chances
         cadeia novoJogo=""
-        inteiro menuOpcao
-        inteiro valorMaximo
-        inteiro chances
-        
 
+        
         
         funcao menuJogo(){			//inicio da função menu//
 
@@ -57,7 +52,7 @@ programa {
           limpa()
           	se(novoJogo=="S" ou novoJogo=="s" ou novoJogo=="Sim" ou novoJogo=="sim"){
           	limpa()   
-          	tentativas=1    	    	
+          	tentativas=1   	    	
           	inicio()         	
           	}senao{
           	}
