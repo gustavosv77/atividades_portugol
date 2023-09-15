@@ -5,9 +5,7 @@ inclua biblioteca Matematica-->mat
 	
 	
 			inteiro peso
-			real altura
-			real result
-			real arredonda
+			real altura, result, arredonda		 
       logico reiniciar=verdadeiro
 
       funcao reiniciarImc(){
