@@ -55,7 +55,9 @@ programa {
           	se(novoJogo=="S" ou novoJogo=="s" ou novoJogo=="Sim" ou novoJogo=="sim"){
           	limpa()   
           	tentativas=1   	    	
-          	inicio()         	
+          	sortear()
+      	    jogar()
+      	    regras()        	
           	}senao{
           	}
         } 
