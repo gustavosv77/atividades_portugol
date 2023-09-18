@@ -25,23 +25,31 @@ programa {
 							
 		funcao jogar(){			//função que guarda o número que o usuário digita	
 			      se(menuOpcao==1){
+			     escreva("| Tentativa ", tentativas," |\n\n\n\n")
             escreva("Digite um número entre 1 e 50 para tentar adivinhar!\n\n")
         		escreva("Resposta:")
         		leia(numero)
         		limpa()
 			}
-        		se(menuOpcao==2){	
+        		senao se(menuOpcao==2){	
+        			escreva("| Tentativa ", tentativas," |\n\n\n\n")
             escreva("Digite um número entre 1 e 70 para tentar adivinhar!\n\n")
         		escreva("Resposta:")
         		leia(numero)
         		limpa()
         		}
-            se(menuOpcao==3){
+            senao se(menuOpcao==3){
+            	escreva("| Tentativa ", tentativas," |\n\n\n\n")
             escreva("Digite um número entre 1 e 100 para tentar adivinhar!\n\n")
         		escreva("Resposta:")
         		leia(numero)
         		limpa()
         		}
+        		  senao{
+        		  	inicio()
+        		  }
+        		  	 								
+        		
 		}				
 			
 		
@@ -97,10 +105,9 @@ programa {
 	       		pare
 			}
 			
-	          senao se(sorteio<numero){
-	            escreva("O número digitado é maior que o Sorteado\n\n")
-              escreva("Tentativas:", tentativas,"\n")
-	            escreva("Tente novamente!\n\n")
+	          senao se(sorteio<numero){    
+              escreva("| Tentativa ", tentativas+1," |\n\n\n\n")
+              escreva("O número sorteado é MENOR que o digitado; Tente Novamente!\n\n")    
 	            escreva("Resposta:")
 	            tentativas++           
 	            leia(numero)
@@ -108,11 +115,10 @@ programa {
 	          		}
 	            
 	          senao se(sorteio>numero){
-	            escreva("O número digitado é menor que o Sorteado\n\n")
-              escreva("Tentativas:", tentativas,"\n\n")
-	            escreva("Tente novamente!\n\n")
-	            tentativas++
-	            escreva("Resposta:")           
+	            escreva("| Tentativa ", tentativas+1," |\n\n\n\n")
+              escreva("O número sorteado é MAIOR que o digitado; Tente Novamente!\n\n")    
+	            escreva("Resposta:")
+	            tentativas++           
 	            leia(numero)
 	            limpa()
 	          		} 
