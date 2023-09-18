@@ -29,9 +29,14 @@ programa {
 		para(inteiro i = 0 ; i<=3 ; i++) {
         escreva ("\nDigite a nota ",i+1,": ")
         leia(nota[i])
+        se(nota[i]>10){
+          limpa()       
+          inicio()
+          
+        }
         limpa()
 		}   
-
+       
 
         result= (nota[0] + nota[1] + nota[2] + nota[3]) / 4
 
