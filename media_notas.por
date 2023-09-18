@@ -1,8 +1,7 @@
 programa {
-  
-    
+   
     real result
-    real nota1, nota2, nota3, nota4
+    real nota[4]
     logico reiniciar = verdadeiro
 
     funcao reiniciarMedia(){
@@ -22,33 +21,19 @@ programa {
   }
 
     funcao calcularMedia(){
-    escreva("Descubra se foi aprovado inserindo suas notas\n")
+    escreva("Descubra se foi aprovado inserindo suas notas!\n")
     
-    escreva("\nLembre que as notas vão de 0 a 10 \n")
+    escreva("\nLembre que as notas vão de 0 a 10 \n\n")
 
     
-
-        escreva ("\nDigite a primeira nota:")
-        leia(nota1)
+		para(inteiro i = 0 ; i<=3 ; i++) {
+        escreva ("\nDigite a nota ",i+1,": ")
+        leia(nota[i])
         limpa()
-                
-           
-        escreva ("Digite a segunda nota:")
-        leia(nota2)
-        limpa() 
-            
-     
-        escreva ("Digite a terceira nota:")
-        leia(nota3)
-        limpa()
-            
-
-        escreva ("Digite a quarta nota:")
-        leia(nota4)
-        limpa()
+		}   
 
 
-        result= (nota1 + nota2 + nota3 + nota4) / 4
+        result= (nota[0] + nota[1] + nota[2] + nota[3]) / 4
 
 
         escreva("Sua média foi de: " , result, "\tpontos\n")
